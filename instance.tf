@@ -3,6 +3,7 @@ resource "aws_instance" "oblak-vpn-machine" {
   ami                    = var.ami-id
   instance_type          = var.instance-type
   key_name               = var.key_pair_name
+  user_data              = data.template_file.user_data.rendered
   
   tags                   = {
     Name  = "oblak-vpn-machine-main"
