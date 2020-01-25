@@ -39,8 +39,8 @@ resource "aws_security_group" "oblak-vpn-sg" {
 
   ingress {
     # HTTPS IN traffic
-    from_port   = 1194
-    to_port     = 1194
+    from_port   = 2018
+    to_port     = 2018
     protocol    = "udp"
     # Please restrict your ingress to only necessary IPs and ports.
     # Opening to 0.0.0.0/0 can lead to security vulnerabilities.
